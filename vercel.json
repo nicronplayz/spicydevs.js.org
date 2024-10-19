@@ -1,15 +1,6 @@
 {
+  "cleanUrls": true,
   "redirects": [
-    {
-      "source": "/",
-      "destination": "/index.html",
-      "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/404.html"
-    }
+    { "source": "/", "destination": "/index.html", "permanent": true }
   ]
 }
