@@ -780,88 +780,6 @@
               />
             </div>
 
- <div class="col-lg-6">
-  <form id="myForm" role="form" class="php-email-form">
-    <div class="row">
-      <div class="col form-group">
-        <input
-          type="text"
-          name="name"
-          class="form-control"
-          id="name"
-          placeholder="Your Discord Name"
-          required
-        />
-      </div>
-      <div class="col form-group">
-        <input
-          type="email"
-          class="form-control"
-          name="email"
-          id="email"
-          placeholder="Your Email"
-          required
-        />
-      </div>
-    </div>
-    <div class="form-group">
-      <input
-        type="text"
-        class="form-control"
-        name="subject"
-        id="subject"
-        placeholder="Subject"
-        required
-      />
-    </div>
-    <div class="form-group">
-      <textarea
-        class="form-control"
-        name="message"
-        id="message"
-        rows="5"
-        placeholder="Message"
-        required
-      ></textarea>
-    </div>
-
-    <div class="text-center">
-      <button type="submit" id="submitButton">
-        Send Message
-      </button>
-    </div>
-  </form>
-</div>
-
-<style>
-  /* Basic form styling */
-  #myForm {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1s ease-in-out;
-  }
-
-  /* Gradient Input Fields */
-  .form-control {
-    background: linear-gradient(135deg, #f0f0f0, #ffffff);
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
-  }
-
-  /* On Focus Animation */
-  .form-control:focus {
-    background: linear-gradient(135deg, #e0f7fa, #ffffff);
-    border-color: #007bff;
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-    outline: none;
-  }
-
-  /* Button Styling */
-  #submitButton {
 <div class="col-lg-6">
   <form id="myForm" role="form" class="php-email-form">
     <div class="row">
@@ -915,52 +833,61 @@
   </form>
 </div>
 
-<!-- Make sure all your CSS is properly wrapped inside the <style> tag -->
 <style>
-  /* Basic form styling */
+  /* Form container with vibrant gradient and shadow */
   #myForm {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #f0f8ff, #e6e6fa, #f8f9fa);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     animation: fadeIn 1s ease-in-out;
   }
 
-  /* Gradient Input Fields */
+  /* Gradient input fields with soft glowing effects */
   .form-control {
-    background: linear-gradient(135deg, #f0f0f0, #ffffff);
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
   }
 
-  /* On Focus Animation */
+  /* Focus state: glow and color shift */
   .form-control:focus {
     background: linear-gradient(135deg, #e0f7fa, #ffffff);
-    border-color: #007bff;
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5), inset 0 0 5px rgba(0, 123, 255, 0.3);
     outline: none;
   }
 
-  /* Button Styling */
+  /* Button with animated gradient and hover effects */
   #submitButton {
-    background: linear-gradient(135deg, #007bff, #0056b3);
+    background: linear-gradient(45deg, #007bff, #00bfff);
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: background 0.4s, box-shadow 0.4s, transform 0.2s;
     cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
   }
 
-  /* Button Hover Effect */
+  /* Button hover state: deep glow and scale effect */
   #submitButton:hover {
-    background: linear-gradient(135deg, #0056b3, #003a75);
-    transform: scale(1.05);
+    background: linear-gradient(45deg, #0056b3, #007bff);
+    transform: scale(1.1);
+    box-shadow: 0 12px 25px rgba(0, 123, 255, 0.7);
   }
 
-  /* Form Load Animation */
+  /* Text area styling with gradient */
+  textarea.form-control {
+    background: linear-gradient(135deg, #f0f8ff, #ffffff);
+    resize: none;
+    height: 150px;
+  }
+
+  /* Smooth form load animation */
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -972,29 +899,15 @@
     }
   }
 
-  /* Animation for Form Elements */
-  .php-email-form {
-    animation: slideIn 1s ease-in-out;
-  }
-
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  /* Disabled fields visual styling */
+  /* Enhanced disabled state for fields */
   .form-control:disabled,
   #submitButton:disabled {
     background-color: #e9ecef;
     opacity: 0.7;
+    cursor: not-allowed;
   }
 </style>
+
 
 
 
