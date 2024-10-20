@@ -862,6 +862,89 @@
 
   /* Button Styling */
   #submitButton {
+<div class="col-lg-6">
+  <form id="myForm" role="form" class="php-email-form">
+    <div class="row">
+      <div class="col form-group">
+        <input
+          type="text"
+          name="name"
+          class="form-control"
+          id="name"
+          placeholder="Your Discord Name"
+          required
+        />
+      </div>
+      <div class="col form-group">
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          id="email"
+          placeholder="Your Email"
+          required
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        name="subject"
+        id="subject"
+        placeholder="Subject"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <textarea
+        class="form-control"
+        name="message"
+        id="message"
+        rows="5"
+        placeholder="Message"
+        required
+      ></textarea>
+    </div>
+
+    <div class="text-center">
+      <button type="submit" id="submitButton">
+        Send Message
+      </button>
+    </div>
+  </form>
+</div>
+
+<!-- Make sure all your CSS is properly wrapped inside the <style> tag -->
+<style>
+  /* Basic form styling */
+  #myForm {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  /* Gradient Input Fields */
+  .form-control {
+    background: linear-gradient(135deg, #f0f0f0, #ffffff);
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+  }
+
+  /* On Focus Animation */
+  .form-control:focus {
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+
+  /* Button Styling */
+  #submitButton {
     background: linear-gradient(135deg, #007bff, #0056b3);
     color: white;
     border: none;
@@ -912,72 +995,8 @@
     opacity: 0.7;
   }
 </style>
-           
- border: 2px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    transition: border-color 0.3s, box-shadow 0.3s;
-  }
 
-  /* Focus effects on input */
-  .form-control:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
 
-  /* Button styling */
-  #submitButton {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-    cursor: pointer;
-  }
-
-  /* Hover effect on button */
-  #submitButton:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-  }
-
-  /* Animation on form load */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Disabled fields visual styling */
-  .form-control:disabled,
-  #submitButton:disabled {
-    background-color: #e9ecef;
-    opacity: 0.7;
-  }
-
-  /* Form container animation */
-  .php-email-form {
-    animation: slideIn 1s ease-in-out;
-  }
-
-  /* Slide in animation */
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-</style>
 
       <!-- End Contact Section -->
     </main>
