@@ -780,7 +780,7 @@
               />
             </div>
 
-<div class="col-lg-6">
+ <div class="col-lg-6">
   <form id="myForm" role="form" class="php-email-form">
     <div class="row">
       <div class="col form-group">
@@ -791,7 +791,6 @@
           id="name"
           placeholder="Your Discord Name"
           required
-          enabled
         />
       </div>
       <div class="col form-group">
@@ -802,7 +801,6 @@
           id="email"
           placeholder="Your Email"
           required
-          enabled
         />
       </div>
     </div>
@@ -814,7 +812,6 @@
         id="subject"
         placeholder="Subject"
         required
-        enabled
       />
     </div>
     <div class="form-group">
@@ -825,12 +822,11 @@
         rows="5"
         placeholder="Message"
         required
-        enabled
       ></textarea>
     </div>
 
     <div class="text-center">
-      <button type="submit" id="submitButton" disabled>
+      <button type="submit" id="submitButton">
         Send Message
       </button>
     </div>
@@ -847,9 +843,77 @@
     animation: fadeIn 1s ease-in-out;
   }
 
-  /* Form input fields */
+  /* Gradient Input Fields */
   .form-control {
+    background: linear-gradient(135deg, #f0f0f0, #ffffff);
     border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+  }
+
+  /* On Focus Animation */
+  .form-control:focus {
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+
+  /* Button Styling */
+  #submitButton {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+  }
+
+  /* Button Hover Effect */
+  #submitButton:hover {
+    background: linear-gradient(135deg, #0056b3, #003a75);
+    transform: scale(1.05);
+  }
+
+  /* Form Load Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Animation for Form Elements */
+  .php-email-form {
+    animation: slideIn 1s ease-in-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Disabled fields visual styling */
+  .form-control:disabled,
+  #submitButton:disabled {
+    background-color: #e9ecef;
+    opacity: 0.7;
+  }
+</style>
+           
+ border: 2px solid #ddd;
     border-radius: 5px;
     padding: 10px;
     transition: border-color 0.3s, box-shadow 0.3s;
